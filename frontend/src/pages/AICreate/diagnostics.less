@@ -1,0 +1,54 @@
+.emptyEnhancement {
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+  padding-block: 54px;
+}
+
+.diagnostics {
+  width: min(100%, 680px);
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, .07);
+  border-radius: 15px;
+  background: #191b1c;
+  text-align: left;
+}
+
+.diagnostics strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #d2d1cc;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.diagnostics p {
+  margin: 5px 0;
+  color: #969793;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  color: #7f807c;
+  font-size: 12px;
+}
+
+.suggestions > span { margin-right: 3px; }
+
+.suggestions :global(.ant-tag) {
+  margin: 0;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #242627;
+  color: #b8b8b3;
+}
+
+@media (max-width: 620px) {
+  .emptyEnhancement { padding: 42px 18px; }
+}

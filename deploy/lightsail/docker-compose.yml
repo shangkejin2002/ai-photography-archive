@@ -1,0 +1,28 @@
+services:
+  backend:
+    image: eclipse-temurin:21-jre-jammy
+    container_name: kejin-photo-archive-backend
+    restart: unless-stopped
+    user: "1000:1000"
+    env_file:
+      - .env
+    environment:
+      TZ: Asia/Tokyo
+      PUBLIC_BASE_URL: https://kejinphotoarchive.com
+      JAVA_TOOL_OPTIONS: -XX:InitialRAMPercentage=10 -XX:MaxRAMPercentage=60 -XX:+UseG1GC
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - ./app/backend.jar:/app/backend.jar:ro
+      - ./data/db:/data/db
+      - ./data/photos:/data/photos
+    command:
+      - java
+      - -jar
+      - /app/backend.jar
+      - --server.forward-headers-strategy=framework
+      - --server.servlet.session.cookie.secure=true
+      - --spring.datasource.url=jdbc:h2:file:/data/db/user-center;MODE=MySQL;DATABASE_TO_LOWER=TRUE;NON_KEYWORDS=USER;DB_CLOSE_ON_EXIT=FALSE
+      - --spring.datasource.username=sa
+      - --spring.datasource.password=
+      - --app.storage.root=/data/photos

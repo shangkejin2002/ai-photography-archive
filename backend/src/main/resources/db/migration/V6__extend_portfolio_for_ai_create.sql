@@ -1,0 +1,3 @@
+ALTER TABLE portfolio ADD COLUMN description TEXT;
+ALTER TABLE portfolio ADD COLUMN source_prompt VARCHAR(1000);
+ALTER TABLE portfolio ADD COLUMN status VARCHAR(32) NOT NULL DEFAULT 'ACTIVE';

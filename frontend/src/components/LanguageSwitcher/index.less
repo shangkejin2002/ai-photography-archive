@@ -1,0 +1,46 @@
+.switcher {
+  position: fixed;
+  z-index: 1200;
+  top: 18px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 10px;
+  color: rgba(242, 241, 237, 0.55);
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  background: rgba(13, 14, 15, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  backdrop-filter: blur(14px);
+}
+
+.switcher button {
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: color 160ms ease;
+}
+
+.switcher button:hover,
+.switcher button:focus-visible,
+.switcher .active {
+  color: #f2f1ed;
+}
+
+.switcher button:focus-visible {
+  outline: 1px solid #f2f1ed;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+@media (max-width: 720px) {
+  .switcher {
+    top: 12px;
+    right: 12px;
+  }
+}

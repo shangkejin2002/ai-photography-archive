@@ -1,0 +1,3 @@
+-- Deprecated compatibility file.
+-- Spring SQL initialization is disabled. Database schema is managed by Flyway
+-- migrations under src/main/resources/db/migration/.

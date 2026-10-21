@@ -1,0 +1,46 @@
+:root {
+  color-scheme: dark;
+  --app-font-family: Inter, 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--app-font-family);
+  background: #0d0e0f;
+  color: #f2f1ed;
+}
+
+html[lang='ja-JP'] {
+  --app-font-family: Inter, 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'YuGothic', 'Meiryo', sans-serif;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+  background: #0d0e0f;
+}
+
+body {
+  min-width: 320px;
+  color: #f2f1ed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: #efeee9;
+  color: #111213;
+}

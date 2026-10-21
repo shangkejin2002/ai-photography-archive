@@ -1,0 +1,6 @@
+allowBuilds:
+  core-js: true
+  core-js-pure: true
+  # Its postinstall message is not required for this application build.
+  es5-ext: false
+  esbuild: true

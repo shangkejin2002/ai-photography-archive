@@ -1,0 +1,172 @@
+.authPage {
+  position: relative;
+  display: grid;
+  min-height: 100dvh;
+  padding: 56px 24px;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.055), transparent 34%),
+    radial-gradient(circle at 86% 88%, rgba(255, 255, 255, 0.035), transparent 30%),
+    #0d0e0f;
+}
+
+.authPage::before {
+  position: absolute;
+  inset: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.055);
+  border-radius: 32px;
+  content: '';
+  pointer-events: none;
+}
+
+.authPanel {
+  position: relative;
+  width: min(100%, 540px);
+  padding: 52px 54px 46px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 30px;
+  background: rgba(23, 24, 25, 0.92);
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+}
+
+.registerPanel {
+  width: min(100%, 580px);
+}
+
+.intro {
+  margin-bottom: 38px;
+}
+
+.brand {
+  display: inline-block;
+  margin-bottom: 38px;
+  color: #efeee9;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.kicker {
+  margin: 0 0 12px;
+  color: #7f807d;
+  font-size: 12px;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.intro h1 {
+  margin: 0;
+  color: #f2f1ed;
+  font-size: clamp(38px, 5vw, 46px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.subtitle {
+  max-width: 410px;
+  margin: 17px 0 0;
+  color: #999a97;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.form :global(.ant-form-item) {
+  margin-bottom: 24px;
+}
+
+.form :global(.ant-form-item-label) {
+  padding-bottom: 9px;
+}
+
+.form :global(.ant-form-item-label > label) {
+  height: auto;
+  color: #d4d3cf;
+  font-size: 16px;
+}
+
+.form :global(.ant-input),
+.form :global(.ant-input-affix-wrapper) {
+  font-size: 17px;
+}
+
+.form :global(.ant-input-affix-wrapper) {
+  min-height: 56px;
+  padding-inline: 18px;
+  border-color: rgba(255, 255, 255, 0.11);
+  border-radius: 17px;
+  background: #111213;
+}
+
+.form :global(.ant-input-affix-wrapper:hover),
+.form :global(.ant-input-affix-wrapper-focused) {
+  border-color: rgba(255, 255, 255, 0.32);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.045);
+}
+
+.form :global(.ant-input-affix-wrapper .ant-input) {
+  background: transparent;
+}
+
+.submit {
+  min-height: 56px;
+  margin-top: 5px;
+  border-radius: 17px;
+  font-size: 16px;
+  font-weight: 550;
+  letter-spacing: 0.08em;
+}
+
+.switchPage {
+  margin-top: 25px;
+  color: #8f908d;
+  font-size: 15px;
+  text-align: center;
+}
+
+.switchPage a {
+  margin-left: 6px;
+  color: #efeee9;
+  text-decoration: none;
+}
+
+@media (max-width: 620px) {
+  .authPage {
+    padding: 20px 14px;
+    place-items: start center;
+  }
+
+  .authPage::before {
+    display: none;
+  }
+
+  .authPanel,
+  .registerPanel {
+    width: 100%;
+    margin: 0;
+    padding: 36px 24px 32px;
+    border-radius: 24px;
+  }
+
+  .intro {
+    margin-bottom: 30px;
+  }
+
+  .brand {
+    margin-bottom: 42px;
+    font-size: 12px;
+  }
+
+  .intro h1 {
+    font-size: 38px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+}

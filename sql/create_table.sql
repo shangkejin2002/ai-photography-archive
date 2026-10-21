@@ -1,0 +1,8 @@
+-- Deprecated compatibility file.
+-- The authoritative MySQL/H2 schema is versioned with Flyway:
+--   backend/src/main/resources/db/migration/V1__create_user_table.sql
+--   backend/src/main/resources/db/migration/V2__create_photography_archive_tables.sql
+--   backend/src/main/resources/db/migration/V3__add_photography_archive_indexes.sql
+--
+-- Start the Spring Boot application with the target database configured and
+-- Flyway will create or upgrade the schema automatically.

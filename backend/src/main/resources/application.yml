@@ -1,0 +1,40 @@
+server:
+  port: ${SERVER_PORT:8080}
+  servlet:
+    context-path: /api
+    session:
+      cookie:
+        http-only: true
+        same-site: lax
+
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:h2:file:./data/user-center;MODE=MySQL;DATABASE_TO_LOWER=TRUE;NON_KEYWORDS=USER;DB_CLOSE_ON_EXIT=FALSE}
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    baseline-version: 1
+    validate-migration-naming: true
+  sql:
+    init:
+      mode: never
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 22MB
+
+app:
+  public-base-url: ${PUBLIC_BASE_URL:http://localhost:8000}
+  storage:
+    root: ${PHOTO_STORAGE_ROOT:./data/storage}
+    max-file-size-bytes: 20971520
+    max-image-pixels: 80000000
+  ai:
+    deepseek:
+      api-key: ${DEEPSEEK_API_KEY:}
+      base-url: ${DEEPSEEK_BASE_URL:https://api.deepseek.com}
+      model: ${DEEPSEEK_MODEL:deepseek-flash}
+      timeout-seconds: ${DEEPSEEK_TIMEOUT_SECONDS:60}

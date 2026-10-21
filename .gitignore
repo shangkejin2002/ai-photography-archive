@@ -1,0 +1,24 @@
+# Local secrets and overrides
+.env
+.env.*
+!.env.example
+
+# Java / Maven
+backend/target/
+backend/data/
+*.class
+
+# Node / Umi
+frontend/node_modules/
+frontend/dist/
+frontend/src/.umi/
+frontend/src/.umi-production/
+frontend/src/.umi-test/
+
+# IDE and operating-system files
+.idea/
+**/.idea/
+.vscode/
+.DS_Store
+**/.DS_Store
+*.iml
